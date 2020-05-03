@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/myBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/boardwalk" />
+
+
+    <LinearLayout
+        android:id="@+id/myOverlap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/myEmptyHalf"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7" />
+
+        <!--        remaining weight for 3 relative elements is 1.3-->
+        <RelativeLayout
+            android:id="@+id/myBottomHalf"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="18dp"
+            android:layout_weight="1.3">
+
+            <TextView
+                android:id="@+id/firstText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#6699cc"
+                android:padding="8dp"
+                android:text="12:36 Leaving Austin to Los Angeles"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstText">
+
+                <TextView
+                    android:id="@+id/currently"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ffffff"
+                    android:paddingHorizontal="13dp"
+                    android:paddingVertical="12dp"
+                    android:text="currently"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/train"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/currently"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ffffff"
+                    android:paddingHorizontal="13dp"
+                    android:paddingVertical="18dp"
+                    android:text="SuperTrain A136"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/currently"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@android:color/holo_purple"
+                    android:paddingHorizontal="13dp"
+                    android:paddingVertical="6dp"
+                    android:text="Book"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:id="@+id/remaining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/train"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#d0f0c0"
+                    android:paddingHorizontal="13dp"
+                    android:paddingVertical="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/horizontal_halfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/left_half"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginBottom="30dp"
+                                    android:src="@drawable/navigation" />
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="30dp"
+                                    android:src="@drawable/up" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="105dp"
+                                    android:layout_marginTop="50dp"
+                                    android:text="North \n10 mins"
+                                    android:textColor="#6699cc"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="105dp"
+                                    android:layout_marginBottom="25dp"
+                                    android:text="Arrive in 13 mins"
+                                    android:textColor="#6699cc"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/right_half"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginBottom="30dp"
+                                    android:src="@drawable/warning2" />
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="30dp"
+                                    android:src="@drawable/down" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="120dp"
+                                    android:layout_marginTop="50dp"
+                                    android:text="South \n45 mins"
+                                    android:textColor="#6699cc"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="120dp"
+                                    android:layout_marginBottom="25dp"
+                                    android:text="Delays \n33 mins"
+                                    android:textColor="#6699cc"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <!--add another textview below for supertrain element,
+            and another relative element with 4 images and 4 textviews-->
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
