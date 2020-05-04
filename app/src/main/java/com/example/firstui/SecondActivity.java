@@ -1,14 +1,14 @@
 package com.example.firstui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SecondActivity extends AppCompatActivity {
 
     /*@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        findViewById(R.id.book).setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.second_activity);
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(),SecondActivity.class);
+                Intent i = new Intent(v.getContext(),MainActivity.class);
                 startActivity(i);
             }
         });
@@ -52,3 +52,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
