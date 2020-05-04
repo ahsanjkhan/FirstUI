@@ -23,6 +23,17 @@
             android:label="First UI"/>
         <activity android:name=".ThirdActivity"
             android:label="First UI"/>
+        <activity android:name=".OptionsActivity"
+            android:label="First UI">
+
+            <intent-filter>
+                <data android:scheme="https" android:host="ahsanjkhan.github.io"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

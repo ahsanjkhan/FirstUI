@@ -31,10 +31,10 @@ public class ThirdActivity extends AppCompatActivity {
             }
         }
 
-        findViewById(R.id.home).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.more).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(),MainActivity.class);
+                Intent i = new Intent(v.getContext(),OptionsActivity.class);
                 startActivity(i);
             }
         });

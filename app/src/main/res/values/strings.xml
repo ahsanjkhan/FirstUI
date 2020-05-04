@@ -6,4 +6,14 @@
         <item>Edit Booking</item>
         <item>Cancel Booking</item>
     </array>
+
+    <array name="functions">
+        <item>No Selection</item>
+        <item>Visit Website</item>
+        <item>Call Us</item>
+        <item>View On Map</item>
+        <item>Take Picture</item>
+    </array>
+
+
 </resources>

@@ -49,12 +49,12 @@
             android:layout_weight="1"/>
 
         <Button
-            android:id="@+id/home"
+            android:id="@+id/more"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/mySpinner"
             android:background="@android:color/holo_purple"
-            android:text="back to home"
+            android:text="more options"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:padding="5dp"
