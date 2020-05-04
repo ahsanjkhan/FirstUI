@@ -5,14 +5,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.activity.*;
 
-public class SecondActivity extends AppCompatActivity {
-
-    public static final int DETAIL_REQUEST = 1;
+public class ThirdActivity extends AppCompatActivity {
 
     /*@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,35 +21,36 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_activity);
-        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.third_activity);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras!=null){
+            String detailValue = extras.getString("KeyForSending");
+            if (detailValue!=null){
+                Toast.makeText(this,detailValue,Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        findViewById(R.id.home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(),MainActivity.class);
                 startActivity(i);
             }
         });
-        findViewById(R.id.details).setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.second).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(),ThirdActivity.class);
-                i.putExtra("KeyForSending","Loading booking details");
-                startActivityForResult(i,DETAIL_REQUEST);
+                Intent returnIntent = new Intent();
+                String mySelection = ((Spinner)findViewById(R.id.mySpinner)).getSelectedItem().toString();
+                returnIntent.putExtra("KeyForReturning",mySelection);
+                setResult(RESULT_OK,returnIntent);
+                finish();
             }
         });
-    }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (1==0){
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-        if (resultCode == RESULT_OK && requestCode == DETAIL_REQUEST) {
-            if (data.hasExtra("KeyForReturning")) {
-                String myChoice = data.getExtras().getString("KeyForReturning");
-                ((TextView) (findViewById(R.id.userSelection))).setText(myChoice);
-            }
-        }
+
     }
 
 
@@ -74,6 +73,4 @@ public class SecondActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
-

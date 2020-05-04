@@ -87,7 +87,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="7"
                 android:gravity="center_vertical"
-                android:text="Southbound\n min"
+                android:text="Southbound\n33min"
                 android:textColor="#000000" />
 
             <Space
@@ -229,7 +229,7 @@
             android:layout_alignParentTop="true"
             android:background="#6F839A"
             android:padding="2dp"
-            android:text=" 3 Leaving Austin to Los Angeles"
+            android:text="12:15 Leaving Austin to Los Angeles"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
     </RelativeLayout>

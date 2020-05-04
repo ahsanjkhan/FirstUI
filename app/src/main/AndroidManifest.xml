@@ -21,6 +21,8 @@
         <activity
             android:name=".SecondActivity"
             android:label="First UI"/>
+        <activity android:name=".ThirdActivity"
+            android:label="First UI"/>
     </application>
 
 </manifest>

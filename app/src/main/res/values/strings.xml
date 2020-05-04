@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FirstUI</string>
+
+    <array name="choices">
+        <item>View Booking</item>
+        <item>Edit Booking</item>
+        <item>Cancel Booking</item>
+    </array>
 </resources>
