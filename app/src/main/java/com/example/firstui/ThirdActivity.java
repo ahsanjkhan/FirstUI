@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -17,6 +20,20 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }*/
+
+    Number [] myStrings = new Number[]{
+            new Number(1,"ONE"),
+            new Number(2,"TWO"),
+            new Number(3,"THREE"),
+            new Number(4,"FOUR"),
+            new Number(5,"FIVE"),
+            new Number(6,"SIX"),
+            new Number(7,"SEVEN"),
+            new Number(8,"EIGHT"),
+            new Number(9,"NINE"),
+            new Number(10,"TEN")
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +67,13 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
 
+        ((ListView)(findViewById(R.id.myListView))).setAdapter(new NumberAdapter(this,R.layout.row,myStrings));
+        ((ListView)(findViewById(R.id.myListView))).setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(view.getContext(),("Selected: " + myStrings[position].myName),Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
